@@ -39,6 +39,7 @@ The overview of the K8s setup for the dotnet-based distributed application is as
         bash app-start.sh
     ```
     - This starts Minikube and the web API can be accessed through port `5001` using `kubectl` port forwarding
+    - ⚠️ If you encounter any error, refer to FAQ at the bottom
     - Following are the supported endpoints
     ```
         GET http://localhost:5001/weatherforecast
@@ -55,3 +56,11 @@ The overview of the K8s setup for the dotnet-based distributed application is as
         unset `env|grep DOCKER|cut -d\= -f1`
     ```
     - 🛑 If you wish to continue using Minikube, don't use `app-stop.sh`
+
+### FAQ
+
+- What to do when I see `error: unable to forward port because pod is not running. Current status=Pending`
+    - Run the kubectl port forwarding manually using the command 
+    ```sh 
+    kubectl port-forward service/test-api-service 5001:80
+    ```
