@@ -9,4 +9,4 @@ COPY ./data/static.json /data/json/
 EXPOSE 5000
 
 # run the nginx without halting docker
-CMD [ "nginx", "-g", "daemon-off;" ]
+CMD [ "nginx", "-g", "daemon off;" ]
