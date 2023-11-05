@@ -8,8 +8,6 @@ Welcome to the repo. This repo contains Kubernetes setup for
 ### Overview
 The overview of the K8s setup for the dotnet-based distributed application is as follows
 
-💡NOTE: View the overview diagram in light mode
-
 - It contains
     - dotnet (v3.1.1) based web API application with 2 simultaneously running instances
     - NGINX server with 1 instance
